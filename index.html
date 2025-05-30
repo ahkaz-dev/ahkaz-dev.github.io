@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>WoW Race & Class Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
-  <style>
+   <style>
     body {
       font-family: 'MedievalSharp', cursive;
       margin: 0;
@@ -230,20 +231,83 @@
       user-select: text;
     }
     /* Responsive */
-    @media (max-width: 760px) {
-      .info-grid {
-        justify-content: center;
-      }
-      .info-card {
-        width: 90%;
-      }
-      .race-grid {
-        flex-direction: column;
-      }
-      .faction {
-        width: 100%;
-      }
-    }
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  body {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+
+  .quiz-container {
+    padding: 20px 20px;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .quiz-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  #nickname {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.3rem;
+    padding: 14px 0;
+    min-width: unset;
+  }
+
+  #info-block {
+    max-width: 100%;
+    padding: 25px 20px;
+    font-size: 1.1rem;
+  }
+
+  #info-block h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .info-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .info-card img {
+    height: 160px;
+  }
+
+  .info-card .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .info-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .info-card p {
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -423,7 +487,7 @@
   },
   "Охотник на демонов": {
     icon: "https://wow.zamimg.com/images/wow/icons/medium/classicon_demonhunter.jpg",
-    largeImg: "https://i.pinimg.com/736x/71/22/f4/7122f4295609237a0944e811201dbe88.jpg",
+    largeImg: "https://d1s0ws440m13mk.cloudfront.net/original/3X/e/5/e53d4b831ba06187f2dce2b1f498351d57216916.jpg",
     description: "Охотник на демонов — ловкий и смертоносный воин, использующий силу демонов против них самих."
   },
   "Рыцарь смерти": {
