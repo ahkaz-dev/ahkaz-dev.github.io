@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background: #f0f2f5;
+    transition: background 0.3s;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.note {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: grab;
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.note:hover {
+  transform: translateY(10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+}
+
+.note.dragging {
+    opacity: 0.85;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Minimal header */
+.note-header {
+    background: transparent;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    user-select: text;
+}
+
+/* Title */
+.note-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222222;
+}
+
+/* Pin button */
+.pin-btn {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999999;
+    transition: color 0.2s ease;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.pin-btn:hover {
+    color: #555555;
+}
+
+/* Content */
+.note .content {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #444444;
+    user-select: text;
+    overflow-y: auto;
+}
+
+/* Tags container */
+.note .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* Tags */
+.tag {
+    padding: 3px 10px;
+    border-radius: 9999px; /* pill shape */
+    background: #d1d1d1;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.tag:hover {
+    background: #b0b0b0;
+}
+
+/* Pastel colors */
+.tag-friends {
+  background-color: #F7B8B8; /* Soft Coral */
+  color: #7A3A3A;
+}
+
+.tag-relax {
+  background-color: #E7E8A9; /* Pastel Lime */
+  color: #6B6B3E;
+}
+
+.tag-hobby {
+  background-color: #B9B8F7; /* Pastel Lavender */
+  color: #4A4A8C;
+}
+
+.tag-home {
+  background-color: #A8E6CF; /* Mint Green */
+  color: #3A6B58;
+}
+
+.tag-study {
+  background-color: #C5B0E8; /* Light Purple */
+  color: #5A4A8C;
+}
+
+.tag-selfdev {
+  background-color: #F4B6C2; /* Soft Pink */
+  color: #7A4A58;
+}
+
+/* Pinned note */
+.note.pinned {
+    border: 2px solid #f0c040;
+    box-shadow: 0 0 8px #f0c040aa;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.3s ease forwards;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.filter-btn:hover {
+  background: #ddd;
+}
+
+.filter-btn.active {
+  background: #a8d0e6;
+  font-weight: 600;
+  color: #034f84;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(50px); opacity: 0; }
+}
+.modal.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.modal-content.slide-down {
+  animation: slideDown 0.3s ease forwards;
+}
+
+
+@media (max-width: 600px) {
+    .note {
+    height: 240px;
+    padding: 0.75rem;
+    }
+
+    .note h3 {
+    font-size: 1rem;
+    }
+}
