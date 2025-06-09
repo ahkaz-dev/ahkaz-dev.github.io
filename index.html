@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO Заметки</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+<div id="tag-filters" class="tag-filters">
+  <button class="filter-btn tag-home" data-tag="дом" title="дом">🏠 дом</button>
+  <button class="filter-btn tag-relax" data-tag="отдых" title="отдых">🌴 отдых</button>
+  <button class="filter-btn tag-friends" data-tag="друзья" title="друзья">👫 друзья</button>
+  <button class="filter-btn tag-hobby" data-tag="хобби" title="хобби">🎨 хобби</button>
+  <button class="filter-btn tag-study" data-tag="учеба" title="учеба">📚 учеба</button>
+  <button class="filter-btn tag-selfdev" data-tag="саморазвитие" title="саморазвитие">💡 саморазвитие</button>
+  <button class="filter-btn" data-tag="all" title="Показать все">✖️ Сбросить</button>
+</div>
+
+<div class="notes-container" id="notes">
+
+<div class="note" draggable="true" data-id="1">
+  <div class="note-header">
+    <h3>Встреча с друзьями</h3>
+    <button class="pin-btn" title="Закрепить">📌</button>
+  </div>
+  <div class="content">
+    Надо написать всем и договориться, во сколько и где встречаемся. Может, возьму настольные игры.
+  </div>
+  <div class="tags">
+      <span class="tag tag-friends">друзья</span>
+      <span class="tag tag-relax">отдых</span>
+      <span class="tag tag-hobby">хобби</span>
+  </div>
+</div>  
+
+<div class="note" draggable="true" data-id="2">
+  <div class="note-header">
+    <h3>Съездить на дачу</h3>
+    <button class="pin-btn" title="Закрепить">📌</button>
+  </div>
+  <div class="content">
+    Нужно проверить, что с садом, убрать сорняки и подготовить инструменты для посадки цветов.
+  </div>
+  <div class="tags">
+      <span class="tag tag-home">дом</span>
+      <span class="tag tag-hobby">хобби</span>
+  </div>
+</div>  
+
+<div class="note" draggable="true" data-id="3">
+  <div class="note-header">
+    <h3>Подготовить доклад</h3>
+    <button class="pin-btn" title="Закрепить">📌</button>
+  </div>
+  <div class="content">
+    Соберу материалы, сделаю презентацию и пару раз потренируюсь, чтобы не запутаться.
+  </div>
+  <div class="tags">
+      <span class="tag tag-study">учеба</span>
+      <span class="tag tag-selfdev">саморазвитие</span>
+  </div>
+</div>  
+
+<div class="note" draggable="true" data-id="4">
+  <div class="note-header">
+    <h3>Посмотреть пару серий сериала</h3>
+    <button class="pin-btn" title="Закрепить">📌</button>
+  </div>
+  <div class="content">
+    Хочу расслабиться вечером, может, начну новый сериал или продолжу тот, что бросил.
+  </div>
+  <div class="tags">
+    <span class="tag tag-home">дом</span>
+    <span class="tag tag-relax">отдых</span>
+  </div>
+</div>
+
+</div>
+
+<div class="modal" id="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h2 id="modal-title">Заметка</h2>
+    <p id="modal-text">Подробности заметки...</p>
+    <div id="modal-tags" class="tags"></div>
+  </div>
+</div>
+  <script src="filters.js" type="text/javascript"></script>
+  <script src="task.js" type="text/javascript"></script>
+</body>
+</html>
