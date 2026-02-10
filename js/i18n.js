@@ -37,7 +37,7 @@ const i18n = {
             maxWishes: "Maximum 100 wishes! Now: {count}",
             txtSaved: "Saved to TXT!",
             mdSaved: "Saved to MD!",
-            pdfReady: "Ready to print!"
+            pdfSaved: "Savet to PDF!"
         },
         about: {
             title: "About the creators",
@@ -85,7 +85,7 @@ const i18n = {
             maxWishes: "Максимум 100 желаний! Сейчас: {count}",
             txtSaved: "Сохранено в TXT!",
             mdSaved: "Сохранено в MD!",
-            pdfReady: "Готово для печати!"
+            pdfSaved: "Сохранено в PDF!"
         },
         about: {
             title: "О создателях",

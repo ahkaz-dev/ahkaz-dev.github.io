@@ -82,7 +82,24 @@ elements.saveMenu.querySelectorAll("div").forEach(option => {
     };
 });
 
-render();
-applyLang();
-setRandomQuote();
-renderAboutPage();
+// Initialize app when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if onboarding was already shown
+    if (!localStorage.getItem("onboardingShown")) {
+        // Show onboarding first time
+        showOnboarding();
+    } else {
+        // Initialize app directly on subsequent visits
+        render();
+        applyLang();
+        setRandomQuote();
+        renderAboutPage();
+    }
+
+    // Add event listener for "Show onboarding again" link using event delegation
+    document.body.addEventListener("click", function(e) {
+        if (e.target && e.target.id === "show-onboarding") {
+            showOnboardingAgain();
+        }
+    });
+});

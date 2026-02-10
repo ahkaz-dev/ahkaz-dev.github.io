@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <title>PDF</title>
+    <link rel="stylesheet" href="pdf.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="top">
+        <div class="quote">
+            <div id="quoteText"></div>
+            <div id="quoteAuthor" class="author"></div>
+        </div>
+    </div>
+
+    <div class="pages">
+        <div class="page active">
+            <h1 id="title"></h1>
+            <ul id="list"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="pdf.js"></script>
+
+</body>
+</html>

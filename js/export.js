@@ -28,10 +28,17 @@ function exportFile(type) {
         showNotification(t.mdSaved);
     }
 
-    if (type === "pdf") {
-        const win = window.open();
-        win.document.write("<pre>" + content + "</pre>");
-        win.print();
-        showNotification(t.pdfReady);
-    }
+if (type === "pdf") {
+    // Store wishes for PDF
+    sessionStorage.setItem("wishes_pdf", JSON.stringify(wishes));
+
+    // Store current quote for PDF
+    const currentQuotes = i18n[lang].quotes;
+    const randomQuote = currentQuotes[Math.floor(Math.random() * currentQuotes.length)];
+    sessionStorage.setItem("current_quote", JSON.stringify(randomQuote));
+
+    window.open("/assets/pdf/pdf-template.html", "_blank");
+}
+
+
 }

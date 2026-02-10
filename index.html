@@ -11,11 +11,63 @@
 <link rel="stylesheet" href="css/components/input-controls.css">
 <link rel="stylesheet" href="css/components/modals.css">
 <link rel="stylesheet" href="css/components/animations.css">
+<link rel="stylesheet" href="css/components/onboarding.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
 
 <div class="container">
+
+    <div class="onboarding" id="onboarding">
+        <div class="onboarding-content">
+            <div class="onboarding-header">
+                <div class="onboarding-logo">W I S H 1 0 0</div>
+                <div class="onboarding-lang-toggle">
+                    <span class="lang-text active" data-lang="en">Eng</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-text" data-lang="ru">Rus</span>
+                </div>
+            </div>
+            <div class="onboarding-slides">
+                <div class="onboarding-slide active">
+                    <h2 class="slide-title">Welcome!</h2>
+                    <p class="slide-text">This is your personal wish notebook.</p>
+                    <p class="slide-text">Here you can save and track your dreams.</p>
+                </div>
+                <div class="onboarding-slide">
+                    <h2 class="slide-title">How it works</h2>
+                    <p class="slide-text">1. Enter your wish in the input field</p>
+                    <p class="slide-text">2. Click the "+" button or press Enter</p>
+                    <p class="slide-text">3. Your wish will appear in the list</p>
+                </div>
+                <div class="onboarding-slide">
+                    <h2 class="slide-title">Additional features</h2>
+                    <p class="slide-text">You can edit and delete wishes</p>
+                    <p class="slide-text">Export the list to PDF, TXT or MD</p>
+                    <p class="slide-text">Change the interface language</p>
+                </div>
+                <div class="onboarding-slide">
+                    <h2 class="slide-title">Ready to start?</h2>
+                    <p class="slide-text">We're waiting for your wishes!</p>
+                    <p class="slide-text">Start writing down your dreams right now.</p>
+                </div>
+            </div>
+            <div class="onboarding-controls">
+                <div class="onboarding-dots" id="onboarding-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+                <div class="onboarding-button-group">
+                    <button class="onboarding-btn onboarding-back" id="onboarding-back" style="display: none;">Back</button>
+                    <button class="onboarding-btn onboarding-next" id="onboarding-next">Next</button>
+                    <button class="onboarding-btn onboarding-skip" id="onboarding-skip">Skip</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="top">
         <div class="logo">W I S H 1 0 0</div>
@@ -63,6 +115,8 @@
 
 <div class="bottom">
     <a id="switch" class="langFade"></a>
+    <span class="bottom-separator">|</span>
+    <a id="show-onboarding" class="langFade" style="cursor: pointer;">Show intro again</a>
 </div>
 
 <script src="js/i18n.js"></script>
