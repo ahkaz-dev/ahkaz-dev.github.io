@@ -1,0 +1,99 @@
+/* ============================================================================
+INPUT & CONTROLS STYLES
+============================================================================ */
+.inputBox {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    transition: all .25s;
+}
+
+input {
+    width: 330px;
+    background: transparent;
+    border: 2px solid #9B8CFF;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    padding: 14px;
+    color: white;
+    outline: none;
+    font-family: 'Chair 406', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'Chair 406', sans-serif;
+}
+
+button {
+    width: 60px;
+    border: none;
+    background: #9B8CFF;
+    color: white;
+    font-size: 26px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+button:hover {
+    background: #9697ff;
+}
+
+.controls {
+    margin-top: 12px;
+    opacity: .55;
+}
+
+.controls span {
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.controls span:hover {
+    opacity: 1;
+}
+
+.saveWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.saveMenu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    top: 22px;
+
+    background: #0b0f1f;
+    border: 1px solid rgba(140, 145, 255, .25);
+    border-radius: 10px;
+
+    padding: 6px 0;
+    min-width: 90px;
+
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(6px);
+    transition: .25s ease;
+}
+
+.saveMenu div {
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    opacity: .7;
+    transition: .2s;
+}
+
+.saveMenu div:hover {
+    background: rgba(130, 135, 255, .15);
+    opacity: 1;
+}
+
+.saveWrapper.open .saveMenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    filter: blur(0);
+}

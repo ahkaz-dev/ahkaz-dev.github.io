@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WISH100</title>
+<link rel="stylesheet" href="css/components/base.css">
+<link rel="stylesheet" href="css/components/typography.css">
+<link rel="stylesheet" href="css/components/layout.css">
+<link rel="stylesheet" href="css/components/wish-list.css">
+<link rel="stylesheet" href="css/components/input-controls.css">
+<link rel="stylesheet" href="css/components/modals.css">
+<link rel="stylesheet" href="css/components/animations.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top">
+        <div class="logo">W I S H 1 0 0</div>
+        <div class="quote">
+            <div id="quoteText" class="langFade"></div>
+            <div id="quoteAuthor" class="author langFade"></div>
+        </div>
+    </div>
+    <div class="pages">
+        <div id="wishesPage" class="page active">
+            <h1 class="langFade" id="title"></h1>
+
+
+            <ul id="list"></ul>
+            <div id="emptyHint" class="emptyHint langFade"></div>
+
+
+            <div class="inputBox" class="langFade">
+                <input id="input" type="text" placeholder="">
+                <button id="add">+</button>
+            </div>
+            <div class="controls">
+                <div class="saveWrapper">
+                    <span id="save" class="langFade">Save</span>
+
+                    <div id="saveMenu" class="saveMenu">
+                        <div data-type="txt">TXT</div>
+                        <div data-type="md">MD</div>
+                        <div data-type="pdf">PDF</div>
+                    </div>
+                </div>
+                <span id="lang" class="langFade">Rus</span>
+                <span id="clear" class="langFade">Clear</span>
+            </div>
+        </div>
+
+        <div id="aboutPage" class="page">
+            <h1 id="aboutTitle"></h1>
+            <div class="aboutText" id="aboutContent">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="bottom">
+    <a id="switch" class="langFade"></a>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/wishManager.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/export.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

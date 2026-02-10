@@ -1,0 +1,118 @@
+/* ============================================================================
+MODAL STYLES
+============================================================================ */
+/* Overlay */
+.clearModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 8, 18, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+
+.clearModal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Card */
+.clearModal__card {
+    background: #0b0f1f;
+    border: 1px solid rgba(140, 145, 255, .25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 20px;
+
+    transform: translateY(6px);
+    opacity: 0;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.clearModal.show .clearModal__card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text */
+.clearModal__title {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #ff6b6b;
+}
+
+.clearModal__text {
+    font-size: 13px;
+    opacity: .75;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+/* Buttons */
+.clearModal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.clearModal__btn {
+    padding: 7px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    border: 0;
+    transition: background .15s ease, transform .15s ease, opacity .15s ease;
+    width: fit-content;
+}
+
+.clearModal__btn--cancel {
+    background: transparent;
+    color: #d7deff;
+    border: 1px solid rgba(155, 140, 255, 1);
+}
+
+.clearModal__btn--confirm {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+.clearModal__btn:hover {
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+.clearModal__btn--confirm:hover {
+    background: #ff8e8e;
+}
+
+.editInput {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 8px;
+    background: #0b0f1f;
+    border: 1px solid rgba(140, 145, 255, .3);
+    border-radius: 6px;
+    color: #d7deff;
+    font: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.editInput:focus {
+    outline: none;
+    border-color: #7b7cff;
+    box-shadow: 0 0 0 2px rgba(123, 124, 255, 0.2);
+}
+
+.clearModal__text label {
+    display: flex;
+}

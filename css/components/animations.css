@@ -1,0 +1,33 @@
+/* ============================================================================
+ANIMATIONS & TRANSITIONS
+============================================================================ */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.langFade {
+    transition: opacity .22s ease, filter .22s ease;
+}
+
+.langFade.hide {
+    opacity: 0;
+    filter: blur(6px);
+    visibility: hidden;
+}
+
+/* Notification animations */
+.notification {
+    backdrop-filter: blur(10px);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}

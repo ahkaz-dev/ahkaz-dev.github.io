@@ -1,0 +1,47 @@
+/* ============================================================================
+TYPOGRAPHY STYLES
+============================================================================ */
+.logo {
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: #EDEEF3;
+}
+
+.quote {
+    font-size: 18px;
+    opacity: .5;
+    line-height: 1.5;
+    color: #8C8FA3;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 48px;
+    margin: 60px 0 25px;
+}
+
+.aboutText {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.aboutText p {
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.aboutText h3 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    color: #9B8CFF;
+}
+
+.aboutText a {
+    color: #9B8CFF;
+    text-decoration: none;
+}
+
+.aboutText a:hover {
+    text-decoration: underline;
+}
