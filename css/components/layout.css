@@ -26,6 +26,10 @@ LAYOUT STYLES
     pointer-events: auto;
 }
 
+.logo img {
+    width: 1.2em;
+}
+
 .bottom {
     position: fixed;
     bottom: 18px;

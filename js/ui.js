@@ -56,12 +56,22 @@ function renderAboutPage() {
 
     document.getElementById("aboutTitle").textContent = t.title;
     document.getElementById("aboutContent").innerHTML = `
+        <div class='about-div-c' >
+            <a class='about-div-c-link' href="${t.linkedinLink}" target="_blank" >
+                <span>🎨</span>
+                <span>UX/UI Design</span>
+            </a>
+            <a class='about-div-c-link' href="${t.githubLink}" target="_blank" ">
+                <span class='about-div-c-span'>💻</span>
+                <span>Frontend Dev</span>
+            </a>
+        </div>
+        <p class='about-sm-0'>${t.p3}</p>
         <p>${t.p1}</p>
         <p>${t.p2}</p>
-        <p>${t.p3}</p>
-        <h3>${t.authors}</h3>
-        <p>${t.authorName}</p>
-        <p>${t.github}: <a href="${t.githubLink}" target="_blank">${t.github}</a></p>
+        <p>${t.p4}</p>
+        <p>${t.p5}</p>
+        <p class='about-sm-1'>(${t.idea})</p>
     `;
 }
 
