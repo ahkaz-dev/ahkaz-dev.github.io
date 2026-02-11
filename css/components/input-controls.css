@@ -9,15 +9,16 @@ INPUT & CONTROLS STYLES
 }
 
 input {
-    width: 330px;
+    width: 406px;
     background: transparent;
     border: 2px solid #9B8CFF;
     border-right: none;
-    border-radius: 10px 0 0 10px;
+    border-radius: 12px 0 0 12px;
     padding: 14px;
     color: white;
     outline: none;
     font-family: 'Chair 406', sans-serif;
+    font-size: 20px;
 }
 
 input::placeholder {
@@ -30,13 +31,13 @@ button {
     background: #9B8CFF;
     color: white;
     font-size: 26px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 12px 12px 0;
     cursor: pointer;
     transition: all .25s;
 }
 
 button:hover {
-    background: #9697ff;
+    opacity: .7;
 }
 
 .controls {

@@ -46,7 +46,7 @@ MODAL STYLES
 .clearModal__title {
     font-size: 16px;
     margin-bottom: 6px;
-    color: #ff6b6b;
+    color: #9B8CFF;
 }
 
 .clearModal__text {
@@ -70,7 +70,7 @@ MODAL STYLES
     font: inherit;
     font-size: 13px;
     border: 0;
-    transition: background .15s ease, transform .15s ease, opacity .15s ease;
+    transition: background .15s ease, opacity .15s ease;
     width: fit-content;
 }
 
@@ -81,17 +81,12 @@ MODAL STYLES
 }
 
 .clearModal__btn--confirm {
-    background: #ff6b6b;
+    background: #9B8CFF;
     color: #fff;
 }
 
-.clearModal__btn:hover {
-    transform: translateY(-1px);
-    opacity: 1;
-}
-
 .clearModal__btn--confirm:hover {
-    background: #ff8e8e;
+    opacity: .7;
 }
 
 .editInput {

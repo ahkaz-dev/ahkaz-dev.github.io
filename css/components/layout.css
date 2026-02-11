@@ -42,22 +42,7 @@ LAYOUT STYLES
     transition: color .25s ease, opacity .25s ease;
 }
 
-.bottom a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 1px;
-    background: #9ea2ff;
-    transition: width .35s cubic-bezier(.22,.9,.32,1);
-}
-
 .bottom a:hover {
     opacity: 1;
     color: #ffffff;
-}
-
-.bottom a:hover::after {
-    width: 100%;
 }

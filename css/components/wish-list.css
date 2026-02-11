@@ -8,28 +8,49 @@ ul {
 }
 
 li {
-    display: flex;
     align-items: center;
-    padding: 8px 0;
+    padding: 10px 0;
     animation: appear .35s ease;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+#list .icons {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+#list li:hover .icons {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 .number {
     width: 40px;
     text-align: right;
-    margin-right: 12px;
-    opacity: .45;
     color: #8C8FA3;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .text {
     flex: 1;
     text-align: left;
+    font-size: 20px;
+    word-wrap: break-word;
+    max-width: 339px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .icons {
-    opacity: .4;
     font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .icons span {
@@ -40,11 +61,11 @@ li {
     height: 18px;
     cursor: pointer;
     margin-left: 10px;
-    color: #d7deff;
+    color: #8C8FA3;
 }
 
 .icons span:hover {
-    color: #9B8CFF;
+    opacity: .7;
 }
 
 .icon {

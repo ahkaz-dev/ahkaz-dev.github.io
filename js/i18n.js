@@ -6,11 +6,11 @@ const i18n = {
         lang: "Rus",
         title: "My current dreams",
         placeholder: "Enter your wish",
-        save: "Save",
+        save: "— Save",
         aboutBtn: "About the creators / GitHub",
         mywishes: "My wishes",
         emptyHint: "Start writing your dreams.\\nEven the smallest one matters.",
-        clear: "Clear",
+        clear: "Clear —",
         quotes: [
             { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
             { text: "It always seems impossible until it is done.", author: "Nelson Mandela" },
@@ -45,7 +45,7 @@ const i18n = {
             p2: "You can write your dreams and export them as a document.",
             p3: "Created for personal motivation and self reflection.",
             authors: "Authors",
-            authorName: "Your Name",
+            authorName: "",
             github: "GitHub",
             githubLink: "https://github.com"
         }
@@ -54,11 +54,11 @@ const i18n = {
         lang: "Eng",
         title: "Мои текущие мечты",
         placeholder: "Введите желание",
-        save: "Сохранить",
+        save: "— Сохранить",
         aboutBtn: "О создателях / GitHub",
         mywishes: "Мои желания",
         emptyHint: "Начни записывать свои мечты.\\nДаже самая маленькая важна.",
-        clear: "Очистить",
+        clear: "Очистить —",
         quotes: [
             { text: "Будущее принадлежит тем, кто верит в красоту своих мечт.", author: "Элеонор Рузвельт" },
             { text: "Всегда кажется невозможным, пока не сделано.", author: "Нельсон Мандела" },
@@ -93,7 +93,7 @@ const i18n = {
             p2: "Вы можете записывать свои мечты и экспортировать их в документ.",
             p3: "Создано для личной мотивации и саморефлексии.",
             authors: "Авторы",
-            authorName: "Ваше Имя",
+            authorName: "",
             github: "GitHub",
             githubLink: "https://github.com"
         }
