@@ -101,3 +101,7 @@ button:hover {
     transform: translateX(-50%) translateY(0);
     filter: blur(0);
 }
+
+.notify {
+    color: #9b8cff;
+}

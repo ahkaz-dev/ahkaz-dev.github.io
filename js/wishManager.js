@@ -10,6 +10,12 @@ function render() {
         elements.emptyHint.classList.add("hidden");
     }
 
+    if (wishes.length >= 5) {
+        elements.saveBtn.classList.add("notify");
+    } else {
+        elements.saveBtn.classList.remove("notify");
+    }
+
     wishes.forEach((w, i) => {
         const li = document.createElement("li");
         li.innerHTML = `

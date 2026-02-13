@@ -20,7 +20,7 @@ TYPOGRAPHY STYLES
 h1 {
     font-weight: 300;
     font-size: 48px;
-    margin: 60px 0 25px;
+    margin: 60px 0 0px;
 }
 
 .about-div-c {
@@ -81,4 +81,8 @@ h1 {
 .about-sm-1 {
     font-size: 14px !important;
     opacity: .4 !important;
+}
+
+.span-dash {
+    margin: 0 !important;
 }

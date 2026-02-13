@@ -34,6 +34,10 @@ body {
     min-height: 520px;
 }
 
+.top {
+    margin-bottom: 25px;
+}
+
 /* Logo */
 .logo {
     letter-spacing: 10px;
