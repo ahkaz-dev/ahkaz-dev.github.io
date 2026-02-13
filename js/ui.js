@@ -12,7 +12,7 @@ function showNotification(message, isError = false) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: ${isError ? '#ff6b6b' : '#7b7cff'};
+        background: ${isError ? '#B04345' : '#7b7cff'};
         color: white;
         padding: 12px 20px;
         border-radius: 8px;

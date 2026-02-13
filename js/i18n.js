@@ -50,7 +50,7 @@ const i18n = {
             linkedinLink: "https://www.linkedin.com/in/zhrefimov/",
             github: "GitHub",
             githubLink: "https://github.com/ahkaz-dev",
-            idea: "The idea was born in February 2026. Wish fulfillment deadline — It doesn't exist at all",
+            idea: "The idea was born in February 2026. Wish fulfillment deadline It doesn't exist at all",
         }
     },
     ru: {
@@ -69,7 +69,9 @@ const i18n = {
             { text: "Ты никогда не слишком стар, чтобы ставить новые цели или мечтать новую мечту", author: "К.С. Льюис" },
             { text: "Успех — это сумма маленьких усилий, повторяемых день за днем", author: "Роберт Коллье" },
             { text: "Единственный предел нашему завтра — наши сегодняшние сомнения", author: "Франклин Рузвельт" },
-            { text: "То, что ты делаешь сегодня, улучшит все твои завтра", author: "Ралф Марстон" }
+            { text: "То, что ты делаешь сегодня, улучшит все твои завтра", author: "Ралф Марстон" },
+            { text: "Если нужно насрать — насрите, если хочется пердеть — пердите! После этого вам станет лучше", author: "Мао Цэздун" },
+            { text: "Заебался я ебаться, чтоб ебалось как моглось, я ебу собака гусь, и мне похуй заебусь", author: "Пена Детров" }
         ],
         modal: {
             title: "Удалить все желания?",
@@ -101,7 +103,7 @@ const i18n = {
             linkedinLink: "https://www.linkedin.com/in/zhrefimov/",
             github: "GitHub",
             githubLink: "https://github.com/ahkaz-dev",
-            idea: "Идея родилась в феврале 2026 года. Дедлайн исполнения желаний — его вообще нет",
+            idea: "Идея родилась в феврале 2026 года. Дедлайн исполнения желаний его вообще нет",
         }
     }
 };

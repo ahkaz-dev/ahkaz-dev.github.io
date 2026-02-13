@@ -10,11 +10,11 @@ INPUT & CONTROLS STYLES
 
 input {
     width: 406px;
-    background: transparent;
+    background: #181A23;
     border: 2px solid #9B8CFF;
     border-right: none;
     border-radius: 12px 0 0 12px;
-    padding: 14px;
+    padding: 15px 13px 14px 13px;
     color: white;
     outline: none;
     font-family: 'Chair 406', sans-serif;
@@ -23,6 +23,9 @@ input {
 
 input::placeholder {
     font-family: 'Chair 406', sans-serif;
+    line-height: 1.5em;
+    padding-top: 15px;
+    padding-bottom: 13px;
 }
 
 button {

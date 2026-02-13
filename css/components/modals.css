@@ -24,7 +24,6 @@ MODAL STYLES
 /* Card */
 .clearModal__card {
     background: #0b0f1f;
-    border: 1px solid rgba(140, 145, 255, .25);
     border-radius: 12px;
     padding: 20px 24px;
     text-align: center;
@@ -77,12 +76,12 @@ MODAL STYLES
 .clearModal__btn--cancel {
     background: transparent;
     color: #d7deff;
-    border: 1px solid rgba(155, 140, 255, 1);
 }
 
 .clearModal__btn--confirm {
-    background: #9B8CFF;
+    background: transparent;
     color: #fff;
+    border: 1.5px solid rgba(140, 145, 255, .3);
 }
 
 .clearModal__btn--confirm:hover {

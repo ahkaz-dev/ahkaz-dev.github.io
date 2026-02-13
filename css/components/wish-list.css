@@ -10,7 +10,6 @@ ul {
 li {
     align-items: center;
     padding: 10px 0;
-    animation: appear .35s ease;
     display: flex;
     justify-content: center;
     gap: 20px;

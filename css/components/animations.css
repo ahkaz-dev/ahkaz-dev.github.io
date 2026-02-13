@@ -28,6 +28,5 @@ ANIMATIONS & TRANSITIONS
 }
 
 .notification.error {
-    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
     box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
 }
